@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane fx:id="borderpan" minHeight="0" minWidth="0" prefHeight="670.0" prefWidth="750.0" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="nf.fr.digitalcube.view.SudokuController">
+   <top>
+      <MenuBar maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="0" minWidth="0" BorderPane.alignment="CENTER">
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+                  <MenuItem mnemonicParsing="false" onAction="#handleOpenAction" text="Open" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Help">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#handleAboutAction" text="About" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+   </top>
+   <bottom>
+      <Pane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="0" minWidth="0" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button layoutX="283.0" layoutY="100.0" mnemonicParsing="false" onAction="#handleSaveAction" text="Save" />
+            <SplitMenuButton layoutX="178.0" layoutY="100.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="82.0" text="Size">
+              <items>
+                <MenuItem mnemonicParsing="false" onAction="#handleSizeAction" text="4x4" />
+                <MenuItem mnemonicParsing="false" onAction="#handleSizeAction" text="6x6" />
+                  <MenuItem mnemonicParsing="false" onAction="#handleSizeAction" text="9x9" />
+                  <MenuItem mnemonicParsing="false" onAction="#handleSizeAction" text="12x12" />
+                  <MenuItem mnemonicParsing="false" onAction="#handleSizeAction" text="16x16" />
+              </items>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </SplitMenuButton>
+            <Button layoutX="388.0" layoutY="100.0" mnemonicParsing="false" onAction="#handleSolveAction" text="Solve" />
+            <Button layoutX="467.0" layoutY="100.0" mnemonicParsing="false" onAction="#handleResetAction" text="Reset" />
+         </children>
+      </Pane>
+   </bottom>
+</BorderPane>
