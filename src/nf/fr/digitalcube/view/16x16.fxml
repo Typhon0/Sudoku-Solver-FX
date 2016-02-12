@@ -8,9 +8,9 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.Pane?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="675.0" prefWidth="835.0" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="0.0" minWidth="0.0" prefHeight="675.0" prefWidth="835.0" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <Pane prefHeight="675.0" prefWidth="885.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <Pane minHeight="0.0" minWidth="0.0" prefHeight="675.0" prefWidth="885.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
             <TextField layoutX="25.0" layoutY="25.0" prefHeight="31.0" prefWidth="35.0">
                <font>
@@ -1036,6 +1036,16 @@
                <font>
                   <Font name="System Bold" size="15.0" />
                </font></TextField>
+            <Separator layoutX="10.0" layoutY="178.0" prefHeight="6.0" prefWidth="813.0" />
+            <Separator layoutX="216.0" layoutY="13.0" orientation="VERTICAL" prefHeight="651.0" prefWidth="6.0" />
+            <Separator layoutX="415.0" layoutY="14.0" orientation="VERTICAL" prefHeight="651.0" prefWidth="6.0" />
+            <Separator layoutX="616.0" layoutY="14.0" orientation="VERTICAL" prefHeight="651.0" prefWidth="6.0" />
+            <Separator layoutX="13.0" layoutY="338.0" prefHeight="6.0" prefWidth="810.0" />
+            <Separator layoutX="12.0" layoutY="500.0" prefHeight="3.0" prefWidth="812.0" />
+            <Separator layoutX="11.0" layoutY="14.0" orientation="VERTICAL" prefHeight="650.0" prefWidth="6.0" />
+            <Separator layoutX="12.0" layoutY="662.0" prefHeight="6.0" prefWidth="812.0" />
+            <Separator layoutX="822.0" layoutY="14.0" orientation="VERTICAL" prefHeight="650.0" prefWidth="6.0" />
+            <Separator layoutX="12.0" layoutY="12.0" prefHeight="6.0" prefWidth="811.0" />
          </children>
       </Pane>
    </children>

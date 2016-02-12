@@ -49,7 +49,7 @@ public class Sudoku {
 			File file = new File(this.filePath);
 			Scanner sc = new Scanner(file);
 			while (sc.hasNext()) {
-				
+
 				for (int i = 0; i < this.size; i++) {
 					for (int j = 0; j < this.size; j++) {
 						this.grid[i][j] = sc.nextInt();
@@ -65,11 +65,11 @@ public class Sudoku {
 		}
 
 	}
-	
-	public void initGrid(){
-		
+
+	public void initGrid() {
+
 		this.grid = new int[this.size][this.size];
-		
+
 		for (int i = 0; i < this.size; i++) {
 			for (int j = 0; j < this.size; j++) {
 				this.grid[i][j] = 0;
@@ -77,14 +77,15 @@ public class Sudoku {
 			}
 		}
 	}
-	
 
 	public void resetGrid() {
-		for (int i = 0; i < this.size; i++) {
-			for (int j = 0; j < this.size; j++) {
-				this.grid[i][j] = 0;
-			}
+		if (grid != null) {
+			for (int i = 0; i < this.size; i++) {
+				for (int j = 0; j < this.size; j++) {
+					this.grid[i][j] = 0;
+				}
 
+			}
 		}
 	}
 
@@ -97,6 +98,17 @@ public class Sudoku {
 			}
 		}
 
+	}
+
+	public boolean ValidGrid() {
+		for (int i = 0; i < this.grid.length; i++) {
+			for (int j = 0; j < this.grid.length; j++) {
+				if (this.grid[i][j] > getSize() || this.grid[i][j] < 0) {
+					return false;
+				}
+			}
+		}
+		return true;
 	}
 
 	public void setSizeCell() {
@@ -180,11 +192,24 @@ public class Sudoku {
 		return grid;
 	}
 
+	public boolean isEmpty() {
+		int a = 0;
+		for (int i = 0; i < grid.length; i++) {
+			for (int j = 0; j < grid.length; j++) {
+				a = a + this.grid[i][j];
+			}
+		}
+		if (a == 0) {
+			return true;
+		}
+		return false;
+	}
+
 	public void setGrid(int[][] grid) {
-		for(int i = 0;i<grid.length;i++){
-			for(int j = 0 ; j<grid.length;j++){
-				this.grid[i][j] = grid[i][j];	
-			}	
+		for (int i = 0; i < grid.length; i++) {
+			for (int j = 0; j < grid.length; j++) {
+				this.grid[i][j] = grid[i][j];
+			}
 		}
 	}
 
@@ -207,8 +232,6 @@ public class Sudoku {
 	public String getFilePath() {
 		return filePath;
 	}
-	
-	
 
 	public void setSize(int size) {
 		this.size = size;

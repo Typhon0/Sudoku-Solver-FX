@@ -12,7 +12,7 @@ import javafx.scene.layout.BorderPane;
 public class MainApp extends Application {
 
 	private static Stage primaryStage;
-	private BorderPane rootLayout;
+	private static BorderPane rootLayout;
 	private Sudoku sudoku = new Sudoku();
 	
 
@@ -42,15 +42,14 @@ public class MainApp extends Application {
 			e.printStackTrace();
 		}
 	}
+	
+
 
 	
 	public Sudoku getSudoku() {
 		return sudoku;
 	}
 	
-	public BorderPane getRootLayout() {
-		return rootLayout;
-	}
 
 	public void setSudoku(Sudoku sudoku) {
 		this.sudoku = sudoku;

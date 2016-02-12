@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.*?>
 <?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.BorderPane?>
 
-<BorderPane fx:id="borderpan" minHeight="0" minWidth="0" prefHeight="670.0" prefWidth="750.0" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="nf.fr.digitalcube.view.SudokuController">
+<BorderPane fx:id="borderpan" maxHeight="1000.0" maxWidth="1000.0" minHeight="0" minWidth="0" prefHeight="670.0" prefWidth="750.0" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="nf.fr.digitalcube.view.SudokuController">
    <top>
       <MenuBar maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="0" minWidth="0" BorderPane.alignment="CENTER">
         <menus>
@@ -24,10 +25,10 @@
       </MenuBar>
    </top>
    <bottom>
-      <Pane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="0" minWidth="0" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+      <HBox alignment="CENTER" minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="200.0" spacing="50.0" BorderPane.alignment="CENTER">
          <children>
-            <Button layoutX="283.0" layoutY="100.0" mnemonicParsing="false" onAction="#handleSaveAction" text="Save" />
-            <SplitMenuButton layoutX="178.0" layoutY="100.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="82.0" text="Size">
+            <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#handleSaveAction" text="Save" />
+            <SplitMenuButton alignment="BASELINE_CENTER" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="31.0" prefWidth="82.0" text="Size">
               <items>
                 <MenuItem mnemonicParsing="false" onAction="#handleSizeAction" text="4x4" />
                 <MenuItem mnemonicParsing="false" onAction="#handleSizeAction" text="6x6" />
@@ -39,9 +40,12 @@
                   <Cursor fx:constant="HAND" />
                </cursor>
             </SplitMenuButton>
-            <Button layoutX="388.0" layoutY="100.0" mnemonicParsing="false" onAction="#handleSolveAction" text="Solve" />
-            <Button layoutX="467.0" layoutY="100.0" mnemonicParsing="false" onAction="#handleResetAction" text="Reset" />
+            <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#handleSolveAction" text="Solve" />
+            <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#handleResetAction" text="Reset" />
          </children>
-      </Pane>
+         <BorderPane.margin>
+            <Insets />
+         </BorderPane.margin>
+      </HBox>
    </bottom>
 </BorderPane>
