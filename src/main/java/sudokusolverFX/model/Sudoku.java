@@ -1,4 +1,4 @@
-package nf.fr.digitalcube.model;
+package sudokusolverFX.model;
 
 import java.io.BufferedReader;
 import java.io.File;

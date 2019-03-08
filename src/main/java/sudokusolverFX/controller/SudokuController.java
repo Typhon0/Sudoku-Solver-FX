@@ -1,4 +1,4 @@
-package nf.fr.digitalcube.view;
+package sudokusolverFX.controller;
 
 import java.io.BufferedWriter;
 import java.io.File;
@@ -21,8 +21,9 @@ import javafx.scene.layout.Pane;
 import javafx.stage.FileChooser;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
-import nf.fr.digitalcube.MainApp;
-import nf.fr.digitalcube.model.Sudoku;
+import sudokusolverFX.MainApp;
+import sudokusolverFX.model.Sudoku;
+
 
 public class SudokuController {
 
@@ -67,15 +68,15 @@ public class SudokuController {
 			// load fxml
 
 			if (sudoku.getSize() == 4) {
-				SwitchScene("view/4x4.fxml");
+				SwitchScene("/view/4x4.fxml");
 			} else if (sudoku.getSize() == 6) {
-				SwitchScene("view/6x6.fxml");
+				SwitchScene("/view/6x6.fxml");
 			} else if (sudoku.getSize() == 9) {
-				SwitchScene("view/9x9.fxml");
+				SwitchScene("/view/9x9.fxml");
 			} else if (sudoku.getSize() == 12) {
-				SwitchScene("view/12x12.fxml");
+				SwitchScene("/view/12x12.fxml");
 			} else if (sudoku.getSize() == 16) {
-				SwitchScene("view/16x16.fxml");
+				SwitchScene("/view/16x16.fxml");
 				MainApp.getPrimaryStage().setHeight(900);
 				MainApp.getPrimaryStage().setWidth(900);
 			} else {
@@ -123,19 +124,19 @@ public class SudokuController {
 		MenuItem mItem = (MenuItem) event.getSource();
 		String label = mItem.getText();
 		if (label.equalsIgnoreCase("4x4")) {
-			SwitchScene("view/4x4.fxml");
+			SwitchScene("/view/4x4.fxml");
 			sudoku.setSize(4);
 		} else if (label.equalsIgnoreCase("6x6")) {
-			SwitchScene("view/6x6.fxml");
+			SwitchScene("/view/6x6.fxml");
 			sudoku.setSize(6);
 		} else if (label.equalsIgnoreCase("9x9")) {
-			SwitchScene("view/9x9.fxml");
+			SwitchScene("/view/9x9.fxml");
 			sudoku.setSize(9);
 		} else if (label.equalsIgnoreCase("12x12")) {
-			SwitchScene("view/12x12.fxml");
+			SwitchScene("/view/12x12.fxml");
 			sudoku.setSize(12);
 		} else if (label.equalsIgnoreCase("16x16")) {
-			SwitchScene("view/16x16.fxml");
+			SwitchScene("/view/16x16.fxml");
 			MainApp.getPrimaryStage().setHeight(900);
 			MainApp.getPrimaryStage().setWidth(900);
 			sudoku.setSize(16);
@@ -335,7 +336,7 @@ public class SudokuController {
 
 	@FXML
 	private void handleAboutAction() throws IOException {
-		FXMLLoader loader = new FXMLLoader(MainApp.class.getResource("view/About.fxml"));
+		FXMLLoader loader = new FXMLLoader(MainApp.class.getResource("/view/About.fxml"));
 		BorderPane page = (BorderPane) loader.load();
 		Stage dialogStage = new Stage();
 		dialogStage.setTitle("About Sudoku Solver FX");

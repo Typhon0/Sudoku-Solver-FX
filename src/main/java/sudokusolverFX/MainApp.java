@@ -1,13 +1,13 @@
-package nf.fr.digitalcube;
+package sudokusolverFX;
 
 import javafx.application.Application;
 import javafx.stage.Stage;
-import nf.fr.digitalcube.model.Sudoku;
 import java.io.IOException;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.image.Image;
 import javafx.scene.layout.BorderPane;
+import sudokusolverFX.model.Sudoku;
 
 public class MainApp extends Application {
 
@@ -22,7 +22,7 @@ public class MainApp extends Application {
 	public void start(Stage primaryStage) {
 		MainApp.primaryStage = primaryStage;
 		MainApp.primaryStage.setTitle("Sudoku Solver");
-		MainApp.primaryStage.getIcons().add(new Image("nf/fr/digitalcube/ressources/logo.png"));
+		MainApp.primaryStage.getIcons().add(new Image("img/logo.png"));
 		initRootLayout();
 		
 	}
@@ -31,7 +31,7 @@ public class MainApp extends Application {
 		try {
 			// Load root layout from fxml file.
 			FXMLLoader loader = new FXMLLoader();
-			loader.setLocation(MainApp.class.getResource("view/RootLayout.fxml"));
+			loader.setLocation(MainApp.class.getResource("/view/RootLayout.fxml"));
 			rootLayout = (BorderPane) loader.load();
 
 			// Show the scene containing the root layout.
